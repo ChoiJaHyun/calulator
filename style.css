@@ -14,7 +14,7 @@ h1 {
 
 .result {
   background-color: white;
-  box-shadow: 40px 40px 8cqh rgba(0, 0, 0, 0.1);
+  box-shadow: 70px 70px 80px rgba(0, 0, 0, 0.1);
   border: 1px solid rgb(143, 142, 142);
   width: 320px;
   height: 80px;
@@ -55,7 +55,7 @@ button {
   background-color: rgb(252, 251, 251);
   border: 1px solid rgb(143, 142, 142);
   border-radius: 5px;
-  box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.1);
+  box-shadow: 70px 70px 80px rgba(0, 0, 0, 0.1);
   padding: 15px 20px;
 }
 

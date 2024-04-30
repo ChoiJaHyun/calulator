@@ -1,19 +1,78 @@
 let result = 0;
+let operator = "";
 
 const resultEl = document.querySelector(".result");
 
 resultEl.innerHTML = result;
 
 function onClickNumber(number) {
-  if (resultEl.innerHTML.length >= 13) {
-    console.log("end");
-
-    return;
-  }
+  if (resultEl.innerHTML.length >= 13) return;
 
   if (resultEl.innerHTML === "0") {
     resultEl.innerHTML = number;
   } else {
     resultEl.innerHTML += number;
+  }
+}
+
+function onClickOperator(inputOperator) {
+  result = +resultEl.innerHTML;
+
+  resultEl.innerHTML = 0;
+
+  operator = inputOperator;
+
+  console.log(operator);
+}
+
+function onClickMinus() {
+  result = +resultEl.innerHTML;
+
+  resultEl.innerHTML = 0;
+
+  operator = "-";
+}
+
+function onClickMul() {
+  result = +resultEl.innerHTML;
+
+  resultEl.innerHTML = 0;
+
+  operator = "*";
+}
+
+function onClickDiv() {
+  result = +resultEl.innerHTML;
+
+  resultEl.innerHTML = 0;
+
+  operator = "/";
+}
+
+function onClickEnter() {
+  switch (operator) {
+    case "+":
+      result += +resultEl.innerHTML;
+      resultEl.innerHTML = result;
+      break;
+
+    case "-":
+      result -= +resultEl.innerHTML;
+      resultEl.innerHTML = result;
+      break;
+
+    case "*":
+      result *= +resultEl.innerHTML;
+      resultEl.innerHTML = result;
+      break;
+
+    case "/":
+      result = parseInt(result / +resultEl.innerHTML, 10);
+      resultEl.innerHTML = result;
+      break;
+
+    default:
+      console.log("잘못된 연산자입니다.");
+      break;
   }
 }
